@@ -1,3 +1,10 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
 header {
   display: flex;
   flex-wrap: nowrap;
@@ -17,7 +24,7 @@ header {
   nav {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 50px;
     margin: 0;
 
     a {
