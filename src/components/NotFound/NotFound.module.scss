@@ -1,0 +1,21 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  color: #ff6060;
+
+  h2 {
+    font-size: 288px;
+  }
+  p {
+    font-size: 36px;
+  }
+  .Link {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+}
