@@ -1,13 +1,12 @@
-import Header from "../src/components/Header/Header.jsx";
-import Footer from "../src/components/Footer/Footer.jsx";
+import Content from "../src/components/Content/Content";
 import styles from "./App.module.scss";
+import imgherohome from "../src/assets/images/img-hero-home.png";
 
 function App() {
   return (
     <>
-      <div className={`${styles.container}`}>
-        <Header />
-        <Footer />
+      <div className={`container ${styles.container}`}>
+        <Content image={imgherohome} texte={"Chez vous, partout et ailleurs"} />
       </div>
     </>
   );
