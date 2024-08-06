@@ -27,11 +27,15 @@ header {
     gap: 50px;
     margin: 0;
 
-    a {
+    .navLink {
       color: black;
       font-size: 1.5rem;
       text-decoration: none;
       text-transform: capitalize;
+      padding-bottom: 1px;
+      &.active {
+        border-bottom: 2px solid black;
+      }
     }
   }
 }
