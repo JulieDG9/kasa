@@ -1,6 +1,6 @@
 $res: calc(0.01 * 10vmin);
 
-.hero {
+.banner {
   max-width: 1240px;
   width: 100%;
   display: flex;
@@ -20,31 +20,31 @@ $res: calc(0.01 * 10vmin);
     &.shadow {
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
-  }
 
-  img {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-  .homeImg {
-    filter: brightness(40%);
-  }
+    .homeImg {
+      filter: brightness(40%);
+    }
 
-  .aboutImg {
-    filter: brightness(60%);
-  }
+    .aboutImg {
+      filter: brightness(70%);
+    }
 
-  h1 {
-    position: absolute;
-    font-size: 48 * $res;
-    color: white;
-    padding: 25px;
-    z-index: 2;
+    h1 {
+      position: absolute;
+      font-size: 48 * $res;
+      color: white;
+      padding: 25px;
+      z-index: 2;
+    }
   }
 }

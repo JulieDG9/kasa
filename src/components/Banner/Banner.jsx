@@ -3,11 +3,11 @@ import styles from "./Banner.module.scss";
 
 export default function Banner({ image, texte, alt }) {
   const location = useLocation();
+  const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
-  const isHomePage = location.pathname === "/HomePage";
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.banner}>
       <div className={`${styles.container} ${isHomePage ? styles.shadow : ""}`}>
         <img
           src={image}
