@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 65px;
+  width: 30%;
+  gap: 10px;
+
+  .hostName {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+    height: 100%;
+    color: #ff6060;
+    font-size: 1rem;
+    .firstName {
+      font-weight: 500;
+      margin: 0;
+    }
+    .lastName {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  //   h3 {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     justify-content: flex-start;
+  //     height: 52px;
+  //     color: #ff6060;
+  //     font-size: 1rem;
+  //     font-weight: 500;
+  //   }
+
+  .pictureContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    .picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
