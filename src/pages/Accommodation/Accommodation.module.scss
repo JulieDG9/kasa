@@ -1,0 +1,33 @@
+.container {
+  //   height: 100vh;
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  gap: 20px;
+
+  .infosHostContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tagsRatingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .collapsesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 76px;
+  }
+  .equipmentList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
