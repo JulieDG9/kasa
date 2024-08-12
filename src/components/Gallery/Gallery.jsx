@@ -22,7 +22,7 @@ export default function Gallery({ pictures }) {
     <div className={styles.container}>
       {pictures.length > 1 && (
         <div className={styles.nav}>
-          <div className={styles.arrows}>
+          <div className={styles.arrowsContainer}>
             <img src={arrowPrevious} onClick={previous} />
             <img src={arrowNext} onClick={next} />
           </div>

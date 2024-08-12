@@ -7,8 +7,7 @@ export default function NotFound() {
       <h2>404</h2>
       <p>Oups! La page que vous demandez nexiste pas.</p>
       <Link to="/" className={styles.Link}>
-        {" "}
-        Retourner sur la page daccueil
+        Retourner sur la page d'accueil
       </Link>
     </div>
   );

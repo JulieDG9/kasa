@@ -9,7 +9,11 @@ export default function HomePage() {
       <div className={`container ${styles.container}`}>
         <Banner
           image={HomeImg}
-          texte={"Chez vous, partout et ailleurs"}
+          texte={
+            <>
+              Chez vous, <span>partout et ailleurs</span>
+            </>
+          }
           alt={"Bannière page accueil"}
         />
         <Annonces />
