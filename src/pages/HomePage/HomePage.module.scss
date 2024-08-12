@@ -1,8 +1,18 @@
+@import "../../assets/medias.scss";
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
+  justify-content: center;
+  margin: auto;
+  @include xxl {
+    padding-left: clamp(20px, 5vw, 40px);
+    padding-right: clamp(20px, 5vw, 40px);
+  }
+  @include tab {
+    padding: 0 auto;
+  }
 }

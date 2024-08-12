@@ -1,14 +1,22 @@
+@import "../../assets/medias.scss";
+
 .container {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 415px;
   border-radius: 25px;
-  background-color: grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @include tab {
+    border-radius: 15px;
+  }
+  @include xs {
+    height: 255px;
+    border-radius: 10px;
+  }
 
   .nav {
     width: 100%;
@@ -17,28 +25,44 @@
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-    .arrows {
+    .arrowsContainer {
       width: 100%;
       padding: 130px 20px;
       display: flex;
       justify-content: space-between;
+      @include tab {
+        padding-top: 170px;
+        padding-bottom: 125px;
+      }
+      @include xs {
+        padding: 100px 10px 90px;
+      }
+
+      img {
+        @include tab {
+          width: 20px;
+          height: 50px;
+        }
+        @include xs {
+          width: 10px;
+          height: 20px;
+        }
+      }
     }
     .counter {
       width: 100%;
       display: flex;
       justify-content: center;
       color: white;
-      font-size: 1.125rem;
+      font-size: 18px;
       font-weight: 500;
+      @include xs {
+        display: none;
+      }
     }
   }
   .pictures {
     position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 1;
-    // width: 100%;
-    // height: auto;
     object-fit: contain;
     display: flex;
     justify-content: center;

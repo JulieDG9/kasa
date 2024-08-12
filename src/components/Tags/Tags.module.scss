@@ -1,10 +1,17 @@
+@import "../../assets/medias.scss";
+
 .container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
   height: 30px;
   width: 1040px;
+  width: 100%;
   gap: 10px;
+  @include xl {
+    flex-wrap: wrap;
+    height: auto;
+  }
 
   .tag {
     display: flex;
@@ -15,11 +22,25 @@
     padding: 15px;
     border-radius: 10px;
     background-color: #ff6060;
+    @include tab {
+      height: 20px;
+    }
+    @include xs {
+      height: 18px;
+      padding: 10px;
+      border-radius: 5px;
+    }
 
     p {
       font-size: 14px;
       font-weight: 600;
       color: white;
+      @include tab {
+        font-size: 12px;
+      }
+      @include xs {
+        font-size: 10px;
+      }
     }
   }
 }

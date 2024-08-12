@@ -1,8 +1,14 @@
+@import "../../assets/medias.scss";
+
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  margin: 0 auto 0;
+  @include xxl {
+    padding-left: clamp(20px, 5vw, 40px);
+    padding-right: clamp(20px, 5vw, 40px);
+  }
 }
 
 header {
@@ -12,12 +18,15 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1240px;
-  height: 68px;
-  margin: 0;
-  padding: 0;
+  height: 50px;
+  margin: 40px 0;
+  @include xxl {
+    margin: clamp(20px, 5vw, 40px) auto;
+  }
 
   img {
-    width: 210px;
+    width: clamp(145px, 20vw, 210px);
+    height: auto;
     margin: 0;
   }
 
@@ -26,15 +35,25 @@ header {
     flex-wrap: nowrap;
     gap: 50px;
     margin: 0;
+    @include xs {
+      gap: 15px;
+    }
 
     .navLink {
       color: black;
-      font-size: 1.5rem;
+      font-size: clamp(12px, 2.5vw, 24px);
       text-decoration: none;
       text-transform: capitalize;
       padding-bottom: 1px;
       &.active {
         border-bottom: 2px solid black;
+        @include tab {
+          border-bottom: 1px solid black;
+        }
+      }
+      @include tab {
+        text-transform: uppercase;
+        padding-bottom: 0.2px;
       }
     }
   }

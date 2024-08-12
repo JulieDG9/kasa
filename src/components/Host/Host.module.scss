@@ -1,31 +1,51 @@
+@import "../../assets/medias.scss";
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   height: 65px;
-  width: 30%;
-  gap: 10px;
+  width: 100%;
+  @include tab {
+    height: 40px;
+  }
 
   .hostName {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-end;
     width: 80%;
     height: 100%;
     color: #ff6060;
-    font-size: 1rem;
+    font-size: 18px;
+    padding-right: 10px;
+    @include tab {
+      height: 33px;
+      font-size: 15px;
+    }
+    @include xs {
+      height: 33px;
+      font-size: 12px;
+    }
     .firstName {
       font-weight: 500;
       margin: 0;
+      @include tab {
+        font-weight: 400;
+      }
     }
     .lastName {
       font-weight: 500;
       margin: 0;
+      @include tab {
+        font-weight: 400;
+      }
     }
   }
+
   .pictureContainer {
     display: flex;
     justify-content: center;
@@ -34,11 +54,19 @@
     height: 64px;
     border-radius: 100%;
     overflow: hidden;
+    @include xs {
+      width: 32px;
+      height: 32px;
+    }
 
     .picture {
-      width: 100%;
-      height: 100%;
+      width: 64px;
+      height: 64px;
       object-fit: cover;
+      @include xs {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }
