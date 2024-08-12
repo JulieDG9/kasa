@@ -1,3 +1,4 @@
+@import "../../assets/medias.scss";
 .collapse {
   width: 100%;
   position: relative;
@@ -13,18 +14,34 @@
   background-color: #ff6060;
   color: white;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: border-radius 0.3s ease-in-out;
+
+  &.openTc {
+    border-radius: 5px;
+  }
+  @include xs {
+    height: 30px;
+    border-radius: 5px;
+  }
 
   h2 {
     width: 95%;
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
+    @include xs {
+      font-size: 0.8rem;
+    }
   }
 
   .chevron {
     transition: transform 0.3s ease;
+    @include xs {
+      width: 15px;
+      height: 10px;
+    }
   }
 }
 
@@ -42,11 +59,17 @@
     max-height: 200px;
     padding-top: 15px;
     padding-bottom: 20px;
+    @include xs {
+      padding-bottom: 15px;
+    }
   }
 
-  p {
+  .content {
     margin: 0;
     color: black;
     line-height: 1.5;
+    @include xs {
+      font-size: 12px;
+    }
   }
 }

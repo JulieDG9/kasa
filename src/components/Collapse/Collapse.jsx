@@ -1,11 +1,21 @@
-import styles from "./Collapses.module.scss";
+import { useState } from "react";
+import styles from "./Collapse.module.scss";
 import iconForOpen from "../../assets/images/chevron-for-open.png";
 import iconForClosed from "../../assets/images/chevron-for-closed.png";
 
-export default function Collapse({ title, content, isOpen, onToggle }) {
+export default function Collapse({ title, content }) {
+  const [isOpen, setIsOpen] = useState(0);
+
+  const onToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.collapse}>
-      <div className={styles.titleContainer} onClick={onToggle}>
+      <div
+        className={`${styles.titleContainer} ${isOpen ? styles.openTc : ""}`}
+        onClick={onToggle}
+      >
         <h2>{title}</h2>
         <img
           src={isOpen ? iconForOpen : iconForClosed}
@@ -15,7 +25,7 @@ export default function Collapse({ title, content, isOpen, onToggle }) {
       <div
         className={`${styles.contentContainer} ${isOpen ? styles.open : ""}`}
       >
-        <p>{content}</p>
+        <div className={styles.content}>{content}</div>
       </div>
     </div>
   );
