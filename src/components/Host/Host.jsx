@@ -1,7 +1,6 @@
 import styles from "./Host.module.scss";
 
 export default function Host({ name, picture }) {
-  console.log(name);
   const [firstName, lastName] = name.split(/\s+/);
   return (
     <div className={styles.container}>
